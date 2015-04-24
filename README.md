@@ -18,3 +18,16 @@ $ cd ~/ur5_ws/
 $ source devel/setup.bash
 $ catkin_make
 
+(5) It will start to build the workspace. Now it's time to plug-in your ethernet cable going to the UR5 controller.
+
+(6) You need to manually configure your wired internet connection using the following steps:
+- In the top right of your UI, click the internet symbol. Press edit connections at the bottom
+- This should open the "Network Connections" window. Click the Ethernet Connection and click edit
+- This opens a windows called "Editing *name of connection*", go to the tab IPv4 Settings, set method to manual and add the following information:
+Address: 172.16.0.42 (new computer IP-address)
+Netmask: 255.255.255.0
+Gateway: 172.16.0.1 (might be different, but this is the UR5 IP-address)
+
+
+
+
