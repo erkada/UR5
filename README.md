@@ -13,8 +13,8 @@ This readme assumes you have ros-indigo-desktop-full pre-installed on your lapto
 
 (3) To use moveIt I needed to install a few extra packages, using the following command:
 ```
-sudo apt-get update
-sudo apt-get install ros-indigo-moveit-commander ros-indigo-moveit-planners ros-indigo-moveit-plugins ros-indigo-moveit-ros ros-indigo-moveit-setup-assistant
+  sudo apt-get update
+  sudo apt-get install ros-indigo-moveit-commander ros-indigo-moveit-planners ros-indigo-moveit-plugins ros-indigo-moveit-ros ros-indigo-moveit-setup-assistant
 ``` 
 
 (4) Start a new terminal and build your workspace using the following commands:
