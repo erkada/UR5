@@ -46,20 +46,37 @@ To check if everything is working correctly, you can run a testprogram and send 
 
 (1) Open a terminal window and enter the following commands:
 ```
-  cd ~/catkin_ws/
+  cd ~/ur5_ws/
   source devel/setup.bash
   roslaunch ur_bringup ur5_bringup.launch robot_ip:=172.16.0.1 [reverse_port:=REVERSE_PORT]
   ```
 (2) Open another terminal window and enter the following commands:
 ```
-  cd ~/catkin_ws/
+  cd ~/ur5_ws/
   source devel/setup.bash
   rosrun ur_driver test_move.py
 ```
 (3) The UR5 should start making a test movement.
 
+## MoveIt! with real UR5
+If the previous steps have succeeded, it's time to use MoveIt! with the real hardware. We need to open 3 seperate terminal windows and enter a few commands.
+(1) In terminal window 1 enter the following commands:
+```
+  cd ~/ur5_ws/
+  source devel/setup.bash
+  roslaunch ur_bringup ur5_bringup.launch limited:=true robot_ip:=172.16.0.1 [reverse_port:=REVERSE_PORT]
+```
+(2) In terminal window 2 enter the following commands:
+```  
+  cd ~/ur5_ws/
+  source devel/setup.bash
+  roslaunch ur5_moveit_config ur5_moveit_planning_execution.launch limited:=true robot_ip:=172.16.0.1
+```
+(3) In terminal window 3 enter the following commands:
+```
+  cd ~/catkin_ws/
+  source devel/setup.bash
+  roslaunch ur5_moveit_config moveit_rviz.launch config:=true robot_ip:=172.16.0.1
+```
 
-
-
-
-
+After these steps, Rviz should start and can be used to control the UR5. If it started correctly, Rviz would already display the current state of the robot. If it didn’t start correctly, the model display in Rviz will display the arm as being horizontally extended. With the plan-tab in the Rviz UI you can now plan and execute movements of the Rviz.
