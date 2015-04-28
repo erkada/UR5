@@ -60,6 +60,7 @@ To check if everything is working correctly, you can run a testprogram and send 
 
 ## MoveIt! with real UR5
 If the previous steps have succeeded, it's time to use MoveIt! with the real hardware. We need to open 3 seperate terminal windows and enter a few commands.
+
 (1) In terminal window 1 enter the following commands:
 ```
   cd ~/ur5_ws/
