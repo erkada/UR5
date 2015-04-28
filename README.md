@@ -75,7 +75,7 @@ If the previous steps have succeeded, it's time to use MoveIt! with the real har
 ```
 (3) In terminal window 3 enter the following commands:
 ```
-  cd ~/catkin_ws/
+  cd ~/ur5_ws/
   source devel/setup.bash
   roslaunch ur5_moveit_config moveit_rviz.launch config:=true robot_ip:=172.16.0.1
 ```
