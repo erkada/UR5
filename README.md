@@ -32,9 +32,9 @@ This readme assumes you have ros-indigo-desktop-full pre-installed on your lapto
 - In the top right of your UI, click the internet symbol. Press edit connections at the bottom
 - This should open the "Network Connections" window. Click the Ethernet Connection and click edit
 - This opens a windows called "Editing *name of connection*", go to the tab IPv4 Settings, set method to manual and add the following information:
-⋅⋅* Address: 172.16.0.42 (new computer IP-address)
-⋅⋅* Netmask: 255.255.255.0
-⋅⋅* Gateway: 172.16.0.1 (might be different, but this is the UR5 IP-address)
+  * Address: 172.16.0.42 (new computer IP-address)
+  * Netmask: 255.255.255.0
+  * Gateway: 172.16.0.1 (might be different, but this is the UR5 IP-address)
 
 
 
