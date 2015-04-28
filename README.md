@@ -80,3 +80,39 @@ If the previous steps have succeeded, it's time to use MoveIt! with the real har
 ```
 
 After these steps, Rviz should start and can be used to control the UR5. If it started correctly, Rviz would already display the current state of the robot. If it didn’t start correctly, the model display in Rviz will display the arm as being horizontally extended. With the plan-tab in the Rviz UI you can now plan and execute movements of the Rviz.
+
+## MoveIt! with Gazebo
+It's also possible to use the UR5 model within Gazebo environment following a few extra steps:
+(1) Download and install gazebo: http://gazebosim.org/tutorials?tut=ros_installing.
+(2) I used the following command from the previous tutorial:
+```
+  sudo apt-get install ros-indigo-gazebo-ros-pkgs ros-indigo-gazebo-ros-control
+```
+(3) After this, sometimes when running gazebbo I got an error "couldn't load joint_state controller", this can be fixed by entering the following commands in a terminal window:
+```
+  sudo apt-get update
+  sudo apt-get install ros-indigo-ros-control ros-indigo-ros-controllers
+```
+(4) If the previous steps have succeeded, it's time to use Gazebo. We need to open 3 seperate terminal windows and enter a few commands.
+
+(5) In terminal window 1 enter the following commands:
+```
+  cd ~/ur5_ws  
+  source devel/setup.bash
+  roslaunch ur_gazebo ur5.launch limited:=true
+
+```
+(6) In terminal window 2 enter the following commands:
+```  
+  cd ~/ur5_ws
+  source devel/setup.bash
+  roslaunch ur5_moveit_config ur5_moveit_planning_execution.launch sim:=true limited:=true
+
+```
+(7) In terminal window 3 enter the following commands:
+```
+  cd ~/ur5_ws
+  source devel/setup.bash
+  roslaunch ur5_moveit_config moveit_rviz.launch config:=true
+```
+(8) Once this is done, it's possible to move the simulation with Rviz and the planning tab.
