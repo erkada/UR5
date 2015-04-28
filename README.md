@@ -3,6 +3,8 @@ This document is intented to have a quick and easy setup for using the UR5 robot
 
 This readme assumes you have ros-indigo-desktop-full pre-installed on your laptop/PC.
 
+
+## UR5 configuration
 (1) Start with building a catkin workspace with a name you prefer, in this case I use "ur5_ws".
 
 (2) Clone the UR5 repository into your workspace src folder using the following commands:
