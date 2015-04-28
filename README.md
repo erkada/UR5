@@ -1,5 +1,5 @@
 # UR5
-This document is intented to have a quick and easy setup for using the UR5 robot in ROS.
+This document is intented to have a quick and easy setup for using the UR5 robot in ROS (with Ubuntu 14.04).
 
 This readme assumes you have ros-indigo-desktop-full pre-installed on your laptop/PC.
 
@@ -35,6 +35,30 @@ This readme assumes you have ros-indigo-desktop-full pre-installed on your lapto
   * Address: 172.16.0.42 (new computer IP-address)
   * Netmask: 255.255.255.0
   * Gateway: 172.16.0.1 (might be different, but this is the UR5 IP-address)
+
+(7) If the previous steps are done correctly, at this point you should be able to ping the UR5 from your PC. You can do so by opening a terminal and enter the following command:
+```
+  ping 172.16.0.1
+```
+
+## Test program
+To check if everything is working correctly, you can run a testprogram and send it to the UR5. Make sure you have cleared yhe workspace around your UR5 before you run a program. You can do this through a few steps:
+
+(1) Open a terminal window and enter the following commands:
+```
+  cd ~/catkin_ws/
+  source devel/setup.bash
+  roslaunch ur_bringup ur5_bringup.launch robot_ip:=172.16.0.1 [reverse_port:=REVERSE_PORT]
+  ```
+(2) Open another terminal window and enter the following commands:
+```
+  cd ~/catkin_ws/
+  source devel/setup.bash
+  rosrun ur_driver test_move.py
+```
+(3) The UR5 should start making a test movement.
+
+
 
 
 
