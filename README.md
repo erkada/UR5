@@ -18,9 +18,11 @@ This readme assumes you have ros-indigo-desktop-full pre-installed on your lapto
 ``` 
 
 (4) Start a new terminal and build your workspace using the following commands:
+```
   cd ~/ur5_ws/
   source devel/setup.bash
   catkin_make
+```
 
 (5) It will start to build the workspace. Now it's time to plug-in your ethernet cable going to the UR5 controller.
 
