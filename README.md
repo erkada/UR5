@@ -84,7 +84,8 @@ After these steps, Rviz should start and can be used to control the UR5. If it s
 ## MoveIt! with Gazebo
 It's also possible to use the UR5 model within Gazebo environment following a few extra steps:
 (1) Download and install gazebo: http://gazebosim.org/tutorials?tut=ros_installing.
-  (2) I used the following command from the previous tutorial:
+
+(2) I used the following command from the previous tutorial:
 ```
   sudo apt-get install ros-indigo-gazebo-ros-pkgs ros-indigo-gazebo-ros-control
 ```
